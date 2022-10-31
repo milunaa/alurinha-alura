@@ -1,0 +1,120 @@
+.conteudo__principal {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.subtitulo {
+	font-weight: bold;
+	font-size: 32px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.conteudo__principal-cursos-link {
+	height: 100px;
+	background-color: #FFF;
+	text-align: center;
+	margin: 1%;
+	transition: .3s;
+	box-shadow: 2px 2px 2px #CCC;
+	position: relative;
+}
+
+.conteudo__principal-cursos-link a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.conteudo__principal-cursos-link:hover {
+	box-shadow: 4px 4px 4px #CCC;
+}
+
+.conteudo__principal-cursos-link a:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.conteudo__principal-cursos-link:nth-child(even) a:before {
+	background: url(../img/background1.svg) no-repeat;	
+}
+
+.conteudo__principal-cursos-link:nth-child(odd) a:before {
+	background: url(../img/background2.svg) no-repeat;
+}
+
+.conteudo__principal-cursos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.conteudo__principal-cursos-link {
+	width: 23%;
+	margin: 1%;
+}
+
+.conteudo__principal-cursos-link:nth-child(4n) {
+	margin-right: 0;
+}
+
+.conteudo__principal-cursos-link:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+
+@media(min-width: 769px) {
+
+	.subtitulo {
+		text-align: left;
+	}
+
+	.conteudo__principal-cursos-link:nth-child(3n) {
+		margin-right: 0;
+	}
+	
+	.conteudo__principal-cursos-link:nth-child(3n+1) {
+		margin-left: 0;
+	}
+}
+
+@media(min-width: 1000px) {
+	.conteudo__principal-cursos-link {
+		margin: 1.333%;
+	}
+
+	.conteudo__principal-cursos-link:nth-child(3n) {
+		margin-right: 1.33%;
+	}
+
+	.conteudo__principal-cursos-link:nth-child(3n+1) {
+		margin-left: 1.333%;
+	}
+
+	.conteudo__principal-cursos-link:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	.conteudo__principal-cursos-link:nth-child(4n+1) {
+		margin-left: 0;
+	}
+}
+
+@media(max-width: 768px) {
+
+	.conteudo__principal-cursos {
+		flex-direction: column;
+	}
+
+	.conteudo__principal-cursos-link {
+		width: 100%;
+	}
+}
